@@ -13,7 +13,7 @@ Este es el repositorio del curso. Ejemplos de código, acceso a videos, etc. ser
 
 <a href="https://chat.whatsapp.com/EghTqNNMnuLGiexQnVnXko"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/479px-WhatsApp.svg.png" width="128"></a><br>
 
-<a href="https://chat.whatsapp.com/EghTqNNMnuLGiexQnVnXko">Grupo de Whatsapp</a>
+<a href="https://chat.whatsapp.com/Ky8clkfDANyDGiy4Ngkmc5">Grupo de Whatsapp</a>
 
 
 <b>Grupos</b>
