@@ -17,7 +17,7 @@ Este es el repositorio del curso. Ejemplos de código, acceso a videos, etc. ser
 
 
 <b>Grupos</b>
-<a href="https://docs.google.com/spreadsheets/d/1xm16OfON1tC9PMfzrxQ4t3njNc5nBKdqwcbSh-F2WLo/edit?usp=sharing">Grupos del curso</a>
+<a href="https://docs.google.com/spreadsheets/d/1NfHjaGIvLU_IuuTbuPuFR93U-qmN7YDs/edit?usp=sharing&ouid=117897710133227559254&rtpof=true&sd=true">Grupos del curso</a>
 
 <b>Notas</b>
-<a href="https://docs.google.com/spreadsheets/d/1J5pnPgUrKGLqB9dseHkyrpaidmOMUJbsaVgkUpu7ReI/edit?usp=sharing">Notas del curso</a>
+<a href="https://docs.google.com/spreadsheets/d/1N59ncJikYrA0fc-W995nqvJHGtll_J16/edit#gid=869603100">Notas del curso</a>
