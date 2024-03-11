@@ -23,6 +23,7 @@ Este es el repositorio del curso. Ejemplos de código, acceso a videos, etc. ser
 <a href="https://docs.google.com/spreadsheets/d/1N59ncJikYrA0fc-W995nqvJHGtll_J16/edit#gid=869603100">Notas del curso</a>
 
 ### Dependencias últiles para Android
+Dependencia para instanciar los viewmodels de forma simple
 ```
 implementation("androidx.fragment:fragment-ktx:1.6.2")
 ```
