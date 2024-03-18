@@ -3,7 +3,7 @@
 
 ### Dependencia para instanciar facilmente los viewmodels
 ```
-implementation("androidx.fragment:fragment-ktx:1.4.1")
+implementation("androidx.fragment:fragment-ktx:1.6.2")
 ```
 ### Dependencia para hacer un llamado a un API HTTP
 Retrofit es una librería ampliamente usada para hacer peticiones HTTP
