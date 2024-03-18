@@ -51,7 +51,7 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 
-interface PokedexRepository {
+interface PokedexService {
     @GET("pokemon/{pokemon}")
     fun getPokemon(@Path("pokemon") pokemon: String): Call<Pokemon>
 }
