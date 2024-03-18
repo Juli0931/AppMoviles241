@@ -16,12 +16,12 @@ Retrofit cuenta con un core, pero también un conversor basado en Gson de Google
 ### Dependencias de las corutinas
 Para poder lanzar corutinas use los diferentes ambientes. Para lanzar una corutina desde Activity/Fragment debe usar
 ```
-implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.6.1")
+implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
 ```
 
 Para poder lazar corutinas desde un viewmodel use
 ```
-implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.6.1")
+implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
 ```
 
 ### Dependencia para descargar imágenes
