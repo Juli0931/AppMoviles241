@@ -57,7 +57,7 @@ interface PokedexService {
 ```
 En dto va el modelo del dato para poder hacer la serialización. Un ejemplo simple:
 ```
-data class Pokemon(
+data class PokemonDTO(
     var name:String
 )
 ```
