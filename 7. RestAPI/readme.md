@@ -43,20 +43,19 @@ Use una estructura de carpetas similar a
       - model
    - viewmodel
 ```
-En repository debe crear una interfaz con el CRUD del servicio
+En service debe crear una interfaz con el CRUD del servicio
 ```
-import icesi.edu.co.emptytest.model.Pokemon
+import icesi.edu.co.apitest.data.dto.Pokemon
 import retrofit2.Call
 import retrofit2.http.GET
 import retrofit2.http.Path
-
 
 interface PokedexService {
     @GET("pokemon/{pokemon}")
     fun getPokemon(@Path("pokemon") pokemon: String): Call<Pokemon>
 }
 ```
-En entity van los modelos de base de datos para poder hacer la serialización. Un ejemplo simple:
+En dto va el modelo del dato para poder hacer la serialización. Un ejemplo simple:
 ```
 data class Pokemon(
     var name:String
@@ -64,24 +63,18 @@ data class Pokemon(
 ```
 En donde sólo se está deserializando la propiedad nombre.</br> </br>
 
-Finalmente en la carpeta services puede crear un objeto que permita hacer los llamados
+Finalmente en services puede crear un objeto que permita hacer los llamados
 ```
-package icesi.edu.co.emptytest.util
-
-import icesi.edu.co.emptytest.repository.PokedexRepository
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object RetrofitServices {
+object Retrofit {
 
-    private val pokedexService = Retrofit.Builder()
+    private val pokedexRetrofit = Retrofit.Builder()
         .baseUrl("https://pokeapi.co/api/v2/")
         .addConverterFactory(GsonConverterFactory.create())
         .build()
-    val pokedexRepository: PokedexRepository = pokedexService.create(PokedexRepository::class.java)
-
-
-
+    val pokedexService: PokedexService = pokedexRetrofit.create(PokedexService::class.java)
 }
 ```
 Como se observa la variable pokedexRepository está expuesta para ser usada desde la capa de viewModel
