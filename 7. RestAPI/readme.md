@@ -52,7 +52,7 @@ import retrofit2.http.Path
 
 interface PokedexService {
     @GET("pokemon/{pokemon}")
-    fun getPokemon(@Path("pokemon") pokemon: String): Call<Pokemon>
+    suspend fun getPokemon(@Path("pokemon") pokemon: String): Call<Pokemon>
 }
 ```
 En dto va el modelo del dato para poder hacer la serialización. Un ejemplo simple:
