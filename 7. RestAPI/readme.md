@@ -37,8 +37,11 @@ Use una estructura de carpetas similar a
 - mainpackage
    - model
       - repository
-      - entity
+      - dto
       - services
+   - domain
+      - model
+   - viewmodel
 ```
 En repository debe crear una interfaz con el CRUD del servicio
 ```
