@@ -23,11 +23,13 @@ Como la cámara de fotos guarda archivos, necesita configurar esa parte también
 <application>
 ...
   <provider
-            android:authorities="com.example.icesiapp231"
-            android:name="androidx.core.content.FileProvider"
-            android:exported="false"
-            android:grantUriPermissions="true">
-            <meta-data android:name="android.support.FILE_PROVIDER_PATHS" android:resource="@xml/paths"/>
+    android:name="androidx.core.content.FileProvider"
+    android:authorities="${applicationId}"
+    android:exported="false"
+    android:grantUriPermissions="true">
+
+    <meta-data android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
   </provider>
 ...
 </application>
