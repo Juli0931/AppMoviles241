@@ -1,3 +1,6 @@
+# Ejericio en clase
+Haga algunos cambios en el chat de modo que ahora pueda enviar imágenes en el chat
+
 # Configuración de los permisos
 
 Primero necesita configurar los permisos de la cámara en el manifest.xml
