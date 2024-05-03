@@ -135,7 +135,7 @@ Si necesita que al pulsar la notificación se abra la actividad necesitará un p
 
 
 # Configurar servicio de mensajería V1
-Este es el servivio de mensajería actualizado y está pensado para estar desde un backend. La razón es que ahora no hay clave de servicio estática, sino que es ahora un Token (dinámico).
+Este es el servivio de mensajería actualizado y está pensado para se un nodo de backend. La razón es que ahora no hay clave de servicio estática, sino que es ahora un Token (dinámico). El Token se extrae mediante una credencial de administrados generado desde la Google Cloud Console
 
 Para poder usarlo, revise este proyecto
 [Generador de token OAuth Google](https://github.com/Domiciano/GoogleOAuthTokenGen) <br>
