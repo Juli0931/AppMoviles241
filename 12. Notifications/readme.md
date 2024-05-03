@@ -139,7 +139,7 @@ El payload del mensaje es
 Verá que le hace falta una clave JSON
 Para obtenerla ingrese a la configuración de su proyecto.
 <ol>
-    <li>Vaya a Cloud Messaging</li>
+    <li>Vaya a su proyecto de Firebase. Configuración > Cloud Messaging</li>
     <li>Si no esta habilitada la V1, actívela mendiante el link</li>
     <li>Vaya a Administrar cuentas de servicio</li>
     <li>Cree una cuenta de servicio usando el botón CREAR CUENTA DE SERVICIO con un nombre cualquiera</li>
