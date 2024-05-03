@@ -50,9 +50,9 @@ Para android 13 o superior, se requiere usar este permiso
 ## No olvide perdir el permiso en tiempo de ejecución
 ```
 requestPermissions(
-            arrayOf(
-                android.Manifest.permission.POST_NOTIFICATIONS
-            ), 1
+    arrayOf(
+        android.Manifest.permission.POST_NOTIFICATIONS
+    ), 1
 )
 ```
 
