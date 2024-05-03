@@ -5,7 +5,7 @@ Esta guía corresponde al uso de FCM Legacy, una versión anterior a la actual q
 
 Para esta sección necesita las dependencias de mensajería
 ```
-implementation 'com.google.firebase:firebase-messaging-ktx:23.0.4'
+implementation 'com.google.firebase:firebase-messaging-ktx:24.0.0'
 ```
 
 ## Cree una clase de servicio
