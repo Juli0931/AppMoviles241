@@ -97,13 +97,14 @@ object NotificationUtil {
 ```
 Si necesita que al pulsar la notificación se abra la actividad necesitará un pending intent
 ```
-        val notifyIntent = Intent(context, MainActivity::class.java).apply {
-            flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-        }
-        val notifyPendingIntent = PendingIntent.getActivity(
-            context, 0, notifyIntent,
-            PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
-        )
+val notifyIntent = Intent(context, MainActivity::class.java).apply {
+    flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+}
+
+val notifyPendingIntent = PendingIntent.getActivity(
+    context, 0, notifyIntent,
+    PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
+)
 ```
 # Configurar servicio de mensajería V1
 Este es el servivio de mensajería actualizado y está pensado para se un nodo de backend. La razón es que ahora no hay clave de servicio estática, sino que es ahora un Token (dinámico). El Token se extrae mediante una credencial de administrados generado desde la Google Cloud Console
