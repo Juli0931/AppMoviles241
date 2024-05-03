@@ -105,35 +105,6 @@ Si necesita que al pulsar la notificación se abra la actividad necesitará un p
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
 ```
-## (Legacy) Hacer el POST Request desde Android
-
-```
-    fun POSTtoFCM(json: String): String {
-        val url = URL("https://fcm.googleapis.com/fcm/send")
-        val client = url.openConnection() as HttpsURLConnection
-        client.requestMethod = "POST"
-        client.setRequestProperty("Content-Type", "application/json")
-        client.setRequestProperty("Authorization", "key=$FCM_KEY")
-        client.doOutput = true
-        client.outputStream.bufferedWriter().use {
-            it.write(json)
-            it.flush()
-        }
-        return client.inputStream.bufferedReader().readText()
-    }
-```
-
-## (Legacy) Payload del mensaje a FCM
-```
-{
-  "to": "/topics/alfa",
-  "data": {
-    "name": "Alfa"
-  }
-}
-```
-
-
 # Configurar servicio de mensajería V1
 Este es el servivio de mensajería actualizado y está pensado para se un nodo de backend. La razón es que ahora no hay clave de servicio estática, sino que es ahora un Token (dinámico). El Token se extrae mediante una credencial de administrados generado desde la Google Cloud Console
 
@@ -180,3 +151,36 @@ Para obtenerla ingrese a la configuración de su proyecto.
 ## Referencias
 [1. Arquitectura de FCM](https://firebase.google.com/docs/cloud-messaging/fcm-architecture?hl=es-) <br>
 [2. Migración de Legacy a V1](https://firebase.google.com/docs/cloud-messaging/migrate-v1)
+
+
+
+## (Legacy) Hacer el POST Request desde Android
+
+```
+    fun POSTtoFCM(json: String): String {
+        val url = URL("https://fcm.googleapis.com/fcm/send")
+        val client = url.openConnection() as HttpsURLConnection
+        client.requestMethod = "POST"
+        client.setRequestProperty("Content-Type", "application/json")
+        client.setRequestProperty("Authorization", "key=$FCM_KEY")
+        client.doOutput = true
+        client.outputStream.bufferedWriter().use {
+            it.write(json)
+            it.flush()
+        }
+        return client.inputStream.bufferedReader().readText()
+    }
+```
+
+## (Legacy) Payload del mensaje a FCM
+```
+{
+  "to": "/topics/alfa",
+  "data": {
+    "name": "Alfa"
+  }
+}
+```
+
+
+
