@@ -143,11 +143,10 @@ Para obtenerla ingrese a la configuración de su proyecto.
     <li>Si no esta habilitada la V1, actívela mendiante el link</li>
     <li>Vaya a Administrar cuentas de servicio</li>
     <li>Cree una cuenta de servicio usando el botón CREAR CUENTA DE SERVICIO con un nombre cualquiera</li>
-    <li>Quedará creado, el campo email se le llama PRINCIPAL</li>
-    <li>Ingrese a la cuenta de servicio y vaya a la pestaña CLAVES y cree una CLAVE JSON nueva</li>
+    <li>En rol escoga Firebase Admin y guarde</li>
+    <li>Ingrese a la cuenta de servicio y vaya a la pestaña CLAVES</li>
+    <li>Cree una CLAVE JSON nueva</li>
     <li>Descargue el JSON, ese será su clave.json para el programa</li>
-    <li>Vaya al panel IAM, y vaya a Otorgar acceso</li>
-    <li>Use como principal el correo creado en pasos anteriores y en rol escoga Firebase Admin y guarde</li>
     <li>Ya tendrá todo lo necesario para publicar mensajes PUSH</li>
 </ol>
 ## Referencias
