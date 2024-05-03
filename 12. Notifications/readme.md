@@ -145,7 +145,7 @@ Para obtenerla ingrese a la configuración de su proyecto.
     <li>Cree una cuenta de servicio usando el botón CREAR CUENTA DE SERVICIO con un nombre cualquiera</li>
     <li>En rol escoga Firebase Admin y guarde</li>
     <li>Ingrese a la cuenta de servicio y vaya a la pestaña CLAVES</li>
-    <li>Cree una CLAVE JSON nueva</li>
+    <li>Agrege una CLAVE JSON nueva</li>
     <li>Descargue el JSON, ese será su clave.json para el programa</li>
     <li>Ya tendrá todo lo necesario para publicar mensajes PUSH</li>
 </ol>
