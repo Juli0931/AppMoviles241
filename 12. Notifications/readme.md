@@ -105,7 +105,7 @@ Si necesita que al pulsar la notificación se abra la actividad necesitará un p
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
         )
 ```
-## Hacer el POST Request desde Android
+## (Legacy) Hacer el POST Request desde Android
 
 ```
     fun POSTtoFCM(json: String): String {
@@ -123,7 +123,7 @@ Si necesita que al pulsar la notificación se abra la actividad necesitará un p
     }
 ```
 
-## Payload del mensaje a FCM
+## (Legacy) Payload del mensaje a FCM
 ```
 {
   "to": "/topics/alfa",
