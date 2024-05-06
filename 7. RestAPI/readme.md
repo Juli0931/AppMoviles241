@@ -32,17 +32,8 @@ implementation("com.github.bumptech.glide:glide:4.16.0")
 
 
 # 2. Configurar Retrofit
-Use una estructura de carpetas similar a 
-```
-- mainpackage
-   - model
-      - repository
-      - dto
-      - services
-   - domain
-      - model
-   - viewmodel
-```
+Genere su servicio
+
 En service debe crear una interfaz con el CRUD del servicio
 ```
 import icesi.edu.co.apitest.data.dto.Pokemon
