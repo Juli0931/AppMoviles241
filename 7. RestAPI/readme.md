@@ -54,7 +54,7 @@ Finalmente en services puede crear un objeto que permita hacer los llamados
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-object Retrofit {
+object RetrofitConfiguration {
 
     private val pokedexRetrofit = Retrofit.Builder()
         .baseUrl("https://pokeapi.co/api/v2/")
