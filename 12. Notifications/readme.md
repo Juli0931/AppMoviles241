@@ -129,6 +129,10 @@ val notifyPendingIntent = PendingIntent.getActivity(
     PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
 )
 ```
+## ::2E. Enviar datos
+Para enviar datos debe hacer un POST Request a su nodo backend de modo que este nodo redirija al servicio de FCM
+
+
 # 2. Configurar servicio de mensajería V1 en Google Cloud
 Este es el servivio de mensajería actualizado y está pensado para se un nodo de backend. La razón es que ahora no hay clave de servicio estática, sino que es ahora un Token (dinámico). El Token se extrae mediante una credencial de administrados generado desde la Google Cloud Console
 
