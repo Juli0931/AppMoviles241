@@ -4,14 +4,14 @@ Esta guía corresponde al uso y manejo de Google Firebase Cloud Messaging V1, la
 # 1. Configuración de la aplicación móvil
 En la aplicación móvil se debe configurar la entrada de mensajes asincrónicamente, añadir las dependencias necesarias y se debe definir la forma cómo se muestran. Para esto último, la guía mostrará cómo hacerlo con una Notification por medio de NotificationCompat.Builder
 
-## 1A. Dependencias
+## ::1A. Dependencias
 
 Para esta sección necesita las dependencias de mensajería
 ```
 implementation 'com.google.firebase:firebase-messaging-ktx:24.0.0'
 ```
 
-## 1B. Cree una clase de servicio
+## ::1B. Cree una clase de servicio
 ```
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
@@ -26,7 +26,52 @@ class FCMService : FirebaseMessagingService() {
 }
 ```
 
-## 1C. Registre el servicio en el manifest
+
+
+## ::1D. Permisos para notificaciones
+Para android 13 o superior, se requiere usar este permiso
+```
+<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+<uses-permission android:name="android.permission.INTERNET" />
+```
+
+## ::1E. No olvide perdir el permiso en tiempo de ejecución
+```
+requestPermissions(
+    arrayOf(
+        android.Manifest.permission.POST_NOTIFICATIONS
+    ), 1
+)
+```
+
+# 2. Uso del módulo de mensajería en la aplicación móvil
+
+## ::2A. Recibir mensajes
+Para empezar a recibir mensajes debe primero suscribirse a un topic. Luego de suscrito, los google play services mantendrán comunicación activa con el Broker de mensajería
+
+```
+Firebase.messaging.subscribeToTopic("noti").addOnSuccessListener {
+    Log.e(">>>","Suscrito")
+}
+```
+
+## ::2B. Cree una clase para hacer uso del servicio de mensajería
+
+```
+import com.google.firebase.messaging.FirebaseMessagingService
+import com.google.firebase.messaging.RemoteMessage
+import org.json.JSONObject
+
+class FCMService : FirebaseMessagingService() {
+
+    override fun onMessageReceived(message: RemoteMessage) {
+        val obj = JSONObject(message.data as Map<*, *>)
+        val json = obj.toString()
+    }
+}
+```
+
+## ::2C. Registre el servicio en el manifest
 ```
 <application>
     ...
@@ -41,31 +86,8 @@ class FCMService : FirebaseMessagingService() {
 </application>
 ```
 
-## 1D. Permisos para notificaciones
-Para android 13 o superior, se requiere usar este permiso
-```
-<uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
-<uses-permission android:name="android.permission.INTERNET" />
-```
-
-## 1E. No olvide perdir el permiso en tiempo de ejecución
-```
-requestPermissions(
-    arrayOf(
-        android.Manifest.permission.POST_NOTIFICATIONS
-    ), 1
-)
-```
-
-## Ahora puede suscribirse
-```
-Firebase.messaging.subscribeToTopic("noti").addOnSuccessListener {
-    Log.e(">>>","Suscrito")
-}
-```
-
-## Crear notificaciones UI
-Generar notificaciones visualmente
+## ::2D. Crear notificaciones UI
+Generar notificaciones visualmente. Puede invocarlas dentro del servicio
 ```
 import android.content.Context
 import android.app.Notification
