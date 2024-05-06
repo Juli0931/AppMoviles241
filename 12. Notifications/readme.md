@@ -64,12 +64,11 @@ Firebase.messaging.subscribeToTopic("noti").addOnSuccessListener {
 ## Crear notificaciones UI
 Generar notificaciones visualmente
 ```
+import android.content.Context
 import android.app.Notification
 import android.app.NotificationChannel
 import android.app.NotificationManager
-import android.content.Context
 import androidx.core.app.NotificationCompat
-import com.example.icesiapp231.R
 
 object NotificationUtil {
 
