@@ -145,25 +145,36 @@ Para obtener una clave de servicio ingrese a la configuración de su proyecto.
     <li>Ya tendrá todo lo necesario para publicar mensajes PUSH</li>
 </ol>
 
-## Referencias
-[1. Arquitectura de FCM](https://firebase.google.com/docs/cloud-messaging/fcm-architecture?hl=es-) <br>
-[2. Migración de Legacy a V1](https://firebase.google.com/docs/cloud-messaging/migrate-v1)
+# 3. Nodo de backend
+El nodo de backend debe tener al menos un endpoint que reciba la solicitud de publicación de mensaje. Para realizarlo escoga el backend que mejor se ajuste a sus saberes
 
-Para poder usarlo, revise este proyecto
-[Generador de token OAuth Google](https://github.com/Domiciano/GoogleOAuthTokenGen) <br>
-[FCM Node](https://github.com/Domiciano/FCMNode) <br>
-Este repositorio muestra cómo se puede generar un short-time token para poder enviar solicitudes a FCM
 
-El endpoint cambia a
+[FCM Node](https://github.com/Domiciano/FCMNode)
+```
+https://github.com/Domiciano/FCMNode
+```
+Este nodo está hecho con el framework Springboot con el lenguaje de programación JAVA.<br><br>
+
+
+[FCM Node](https://github.com/Domiciano/FCMNodeJS)
+```
+https://github.com/Domiciano/FCMNodeJS
+```
+Este nodo está hecho con NodeJS en Javascript usando la librería de expressJS<br><br>
+
+Ambos repositorios muestran cómo se puede generar un short-time token para poder enviar solicitudes a FCM
+
+## ::3A. Detalles de conexión
+El módulo de backend hace una solicitud HTTP POST al endpoint
 ```
 https://fcm.googleapis.com/v1/projects/facelogprueba/messages:send
 ```
-Los headers son
+Los headers que usa son
 ```
 Content-Type: application/json; UTF-8
 Authorization: Bearer <FCM_KEY>
 ```
-Donde <FCM_KEY> corresponde al token obtenido del Google Authenticator.
+Donde <FCM_KEY> corresponde al token obtenido a partir de la clave de Cuenta de Servicio.
 
 El payload del mensaje es
 ```
@@ -176,7 +187,6 @@ El payload del mensaje es
   }
 }
 ```
-Verá que le hace falta una clave JSON
 
 
 
@@ -209,4 +219,8 @@ Verá que le hace falta una clave JSON
 ```
 
 
+
+## Referencias
+[1. Arquitectura de FCM](https://firebase.google.com/docs/cloud-messaging/fcm-architecture?hl=es-) <br>
+[2. Migración de Legacy a V1](https://firebase.google.com/docs/cloud-messaging/migrate-v1)
 
