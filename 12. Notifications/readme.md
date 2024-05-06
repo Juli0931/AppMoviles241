@@ -195,33 +195,7 @@ El payload del mensaje es
 
 
 
-## (Legacy) Hacer el POST Request desde Android
 
-```kotlin
-    fun POSTtoFCM(json: String): String {
-        val url = URL("https://fcm.googleapis.com/fcm/send")
-        val client = url.openConnection() as HttpsURLConnection
-        client.requestMethod = "POST"
-        client.setRequestProperty("Content-Type", "application/json")
-        client.setRequestProperty("Authorization", "key=$FCM_KEY")
-        client.doOutput = true
-        client.outputStream.bufferedWriter().use {
-            it.write(json)
-            it.flush()
-        }
-        return client.inputStream.bufferedReader().readText()
-    }
-```
-
-## (Legacy) Payload del mensaje a FCM
-```
-{
-  "to": "/topics/alfa",
-  "data": {
-    "name": "Alfa"
-  }
-}
-```
 
 
 
