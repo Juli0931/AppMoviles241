@@ -131,6 +131,8 @@ val notifyPendingIntent = PendingIntent.getActivity(
 ```
 ## ::2E. Enviar datos
 Para enviar datos debe hacer un POST Request a su nodo backend de modo que este nodo redirija al servicio de FCM. Recuerde que puede hacer POST Request por medio de la librería de Retrofit. <a href="https://github.com/Domiciano/AppMoviles241/tree/main/7.%20RestAPI">Aquí hay una guía</a>
+<br>
+Necesatará el modelo de mensaje de FCM, lo puede ver más adelante
 
 
 # 2. Configurar servicio de mensajería V1 en Google Cloud
