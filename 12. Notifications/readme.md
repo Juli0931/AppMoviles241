@@ -4,14 +4,14 @@ Esta guía corresponde al uso y manejo de Google Firebase Cloud Messaging V1, la
 # 1. APLICACIÓN MÓVIL
 En la aplicación móvil se debe configurar la entrada de mensajes asincrónicamente, añadir las dependencias necesarias y se debe definir la forma cómo se muestran. Para esto último, la guía mostrará cómo hacerlo con una Notification por medio de NotificationCompat.Builder
 
-## Dependencias
+## 1A. Dependencias
 
 Para esta sección necesita las dependencias de mensajería
 ```
 implementation 'com.google.firebase:firebase-messaging-ktx:24.0.0'
 ```
 
-## Cree una clase de servicio
+## 1B. Cree una clase de servicio
 ```
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
@@ -26,7 +26,7 @@ class FCMService : FirebaseMessagingService() {
 }
 ```
 
-## Registre el servicio en el manifest
+## 1C. Registre el servicio en el manifest
 ```
 <application>
     ...
@@ -41,14 +41,14 @@ class FCMService : FirebaseMessagingService() {
 </application>
 ```
 
-## Permisos para notificaciones
+## 1D. Permisos para notificaciones
 Para android 13 o superior, se requiere usar este permiso
 ```
 <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 <uses-permission android:name="android.permission.INTERNET" />
 ```
 
-## No olvide perdir el permiso en tiempo de ejecución
+## 1E. No olvide perdir el permiso en tiempo de ejecución
 ```
 requestPermissions(
     arrayOf(
