@@ -1,4 +1,5 @@
-# FIREBASE CLOUD MESSAGE (FCM)
+<img src="https://miro.medium.com/v2/resize:fit:1400/0*aasYy0TtdvW0H_T0.jpg">
+
 Esta guía corresponde al uso y manejo de Google Firebase Cloud Messaging V1, la versión más reciente del servicio de mensajería
 
 # 1. Configuración de la aplicación móvil
