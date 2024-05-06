@@ -149,14 +149,14 @@ Para obtener una clave de servicio ingrese a la configuración de su proyecto.
 El nodo de backend debe tener al menos un endpoint que reciba la solicitud de publicación de mensaje. Para realizarlo escoga el backend que mejor se ajuste a sus saberes
 
 
-[FCM Node](https://github.com/Domiciano/FCMNode)
+[Springboot FCM Node](https://github.com/Domiciano/FCMNode)
 ```
 https://github.com/Domiciano/FCMNode
 ```
 Este nodo está hecho con el framework Springboot con el lenguaje de programación JAVA.<br><br>
 
 
-[FCM Node](https://github.com/Domiciano/FCMNodeJS)
+[NodeJS FCM Node](https://github.com/Domiciano/FCMNodeJS)
 ```
 https://github.com/Domiciano/FCMNodeJS
 ```
