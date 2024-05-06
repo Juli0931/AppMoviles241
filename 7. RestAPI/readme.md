@@ -1,28 +1,26 @@
 <img src="https://sutilweb.eu/wp-content/uploads/2023/08/API-REST.jpg">
 
+Esta guía se trata de cómo hacer solicitudes HTTP por medio de una apliación móvil Android con una librería clásica estándar industrial
+
 # 1. Instalar dependencias
 
 ### Dependencia para instanciar facilmente los viewmodels
 ```
-implementation("androidx.fragment:fragment-ktx:1.6.2")
-```
-### Dependencia para hacer un llamado a un API HTTP
-Retrofit es una librería ampliamente usada para hacer peticiones HTTP
-```
+// Librería de Retrofit
 implementation("com.squareup.retrofit2:retrofit:2.9.0")  
+// Conversor de JSON a objetos integrado con Retrofit
 implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+// Dependencia para Corutinas
+implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+// Librería para instanciar fácilmente los viewmodels
+implementation("androidx.fragment:fragment-ktx:1.6.2")
 ```
 Retrofit cuenta con un core, pero también un conversor basado en Gson de Google
 
 ### Dependencias de las corutinas
-Para poder lanzar corutinas use los diferentes ambientes. Para lanzar una corutina desde Activity/Fragment debe usar
-```
-implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+Para poder lanzar corutinas use 
 ```
 
-Para poder lazar corutinas desde un viewmodel use
-```
-implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
 ```
 
 ### Dependencia para descargar imágenes
