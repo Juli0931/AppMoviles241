@@ -1,4 +1,4 @@
-<img src="https://restfulapi.net/wp-content/uploads/what-is-rest-api.png" width="256px">
+<img src="https://restfulapi.net/wp-content/uploads/what-is-rest-api.png">
 
 # 1. Instalar dependencias
 
