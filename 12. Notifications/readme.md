@@ -182,7 +182,7 @@ Authorization: Bearer <FCM_KEY>
 Donde <FCM_KEY> corresponde al token obtenido a partir de la clave de Cuenta de Servicio.
 
 El payload del mensaje es
-```
+```json
 {
   "message": {
     "topic": "noti",
