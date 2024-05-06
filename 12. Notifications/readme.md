@@ -8,12 +8,12 @@ En la aplicación móvil se debe configurar la entrada de mensajes asincrónicam
 ## ::1A. Dependencias
 
 Para esta sección necesita las dependencias de mensajería
-```
+```kotlin
 implementation 'com.google.firebase:firebase-messaging-ktx:24.0.0'
 ```
 
 ## ::1B. Cree una clase de servicio
-```
+```kotlin
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import org.json.JSONObject
@@ -31,13 +31,13 @@ class FCMService : FirebaseMessagingService() {
 
 ## ::1C. Permisos para notificaciones
 Para android 13 o superior, se requiere usar este permiso
-```
+```xml
 <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 <uses-permission android:name="android.permission.INTERNET" />
 ```
 
 ## ::1D. No olvide perdir el permiso en tiempo de ejecución
-```
+```kotlin
 requestPermissions(
     arrayOf(
         android.Manifest.permission.POST_NOTIFICATIONS
@@ -50,7 +50,7 @@ requestPermissions(
 ## ::2A. Recibir mensajes
 Para empezar a recibir mensajes debe primero suscribirse a un topic. Luego de suscrito, los google play services mantendrán comunicación activa con el Broker de mensajería
 
-```
+```kotlin
 Firebase.messaging.subscribeToTopic("noti").addOnSuccessListener {
     Log.e(">>>","Suscrito")
 }
@@ -58,7 +58,7 @@ Firebase.messaging.subscribeToTopic("noti").addOnSuccessListener {
 
 ## ::2B. Cree una clase para hacer uso del servicio de mensajería
 
-```
+```kotlin
 import com.google.firebase.messaging.FirebaseMessagingService
 import com.google.firebase.messaging.RemoteMessage
 import org.json.JSONObject
@@ -73,7 +73,7 @@ class FCMService : FirebaseMessagingService() {
 ```
 
 ## ::2C. Registre el servicio en el manifest
-```
+```xml
 <application>
     ...
     <service
@@ -89,7 +89,7 @@ class FCMService : FirebaseMessagingService() {
 
 ## ::2D. Crear notificaciones UI
 Generar notificaciones visualmente. Puede invocarlas dentro del servicio
-```
+```kotlin
 import android.content.Context
 import android.app.Notification
 import android.app.NotificationChannel
@@ -119,7 +119,7 @@ object NotificationUtil {
 }
 ```
 Si necesita que al pulsar la notificación se abra la actividad necesitará un pending intent
-```
+```kotlin
 val notifyIntent = Intent(context, MainActivity::class.java).apply {
     flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
 }
@@ -197,7 +197,7 @@ El payload del mensaje es
 
 ## (Legacy) Hacer el POST Request desde Android
 
-```
+```kotlin
     fun POSTtoFCM(json: String): String {
         val url = URL("https://fcm.googleapis.com/fcm/send")
         val client = url.openConnection() as HttpsURLConnection
