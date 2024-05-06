@@ -113,7 +113,7 @@ Siempre dentro de una corutina se puede usar retrofit como se muestra en el ejem
 ```kotlin
 fun getPokemon(query:String){
         viewModelScope.launch(Dispatchers.IO) {
-            var response = RetrofitServices.pokedexRepository.getPokemon(query).execute()
+            var response = RetrofitConfiguration.pokedexService.getPokemon(query).execute()
             val pokemon = response.body()
         }
     }
