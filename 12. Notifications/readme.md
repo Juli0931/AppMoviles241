@@ -1,7 +1,7 @@
 # FIREBASE CLOUD MESSAGE (FCM)
 Esta guía corresponde al uso y manejo de Google Firebase Cloud Messaging V1, la versión más reciente del servicio de mensajería
 
-# 1. CONFIGURACIÓN DE LA APLICACIÓN MÓVIL
+# 1. Configuración de la aplicación móvil
 En la aplicación móvil se debe configurar la entrada de mensajes asincrónicamente, añadir las dependencias necesarias y se debe definir la forma cómo se muestran. Para esto último, la guía mostrará cómo hacerlo con una Notification por medio de NotificationCompat.Builder
 
 ## 1A. Dependencias
