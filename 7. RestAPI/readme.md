@@ -5,28 +5,24 @@ Esta guía se trata de cómo hacer solicitudes HTTP por medio de una apliación 
 # 1. Instalar dependencias
 
 ### Dependencia para instanciar facilmente los viewmodels
-```
+```kotlin
 // Librería de Retrofit
 implementation("com.squareup.retrofit2:retrofit:2.9.0")  
+
 // Conversor de JSON a objetos integrado con Retrofit
 implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
 // Dependencia para Corutinas
 implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+
 // Librería para instanciar fácilmente los viewmodels
 implementation("androidx.fragment:fragment-ktx:1.6.2")
+
+// Librería para hacer descargas de imagen de forma sencilla
+implementation("com.github.bumptech.glide:glide:4.16.0")
 ```
 Retrofit cuenta con un core, pero también un conversor basado en Gson de Google
 
-### Dependencias de las corutinas
-Para poder lanzar corutinas use 
-```
-
-```
-
-### Dependencia para descargar imágenes
-```
-implementation("com.github.bumptech.glide:glide:4.16.0")
-```
 
 
 
