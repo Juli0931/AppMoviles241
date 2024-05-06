@@ -1,4 +1,5 @@
-# SERVICIO DE MENSAJERÍA GOOGLE FIREBASE CLOUD MESSAGE
+# FIREBASE CLOUD MESSAGE (FCM)
+Esta guía corresponde al uso y manejo de Google Firebase Cloud Messaging V1, la versión más reciente del servicio de mensajería
 
 # 1. Configurar servicio de mensajería 
 
