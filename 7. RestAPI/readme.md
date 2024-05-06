@@ -30,7 +30,7 @@ Retrofit cuenta con un core, pero también un conversor basado en Gson de Google
 Genere su servicio
 
 En service debe crear una interfaz con el CRUD del servicio
-```
+```kotlin
 import icesi.edu.co.apitest.data.dto.Pokemon
 import retrofit2.Call
 import retrofit2.http.GET
@@ -42,7 +42,7 @@ interface PokedexService {
 }
 ```
 En dto va el modelo del dato para poder hacer la serialización. Un ejemplo simple:
-```
+```kotlin
 data class PokemonDTO(
     var name:String
 )
@@ -50,7 +50,7 @@ data class PokemonDTO(
 En donde sólo se está deserializando la propiedad nombre.</br> </br>
 
 Finalmente en services puede crear un objeto que permita hacer los llamados
-```
+```kotlin
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
@@ -69,7 +69,7 @@ Como se observa la variable pokedexRepository está expuesta para ser usada desd
 # 3. Capa ViewModel
 Esta capa es responsable de modelar los datos que va a ver nuestro usuario.
 De esta forma, en el ejemplo de Pokemon, vamos a tener un viewModel similar a:
-```
+```kotlin
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -85,7 +85,7 @@ class PokedexViewModel :ViewModel(){
 En esta capa se usan las corutinas para poder ejecutar las tareas en segundo plano.
 
 Un método de corutina se ve como esto:
-```
+```kotlin
 fun getPokemon(query:String){
    viewModelScope.launch(Dispatchers.IO) {
       ...
@@ -97,20 +97,20 @@ Donde Dispatcher.IO significa que la operación dentro de las llaves se hará en
 
 ### Instanciar un viewmodel
 Si usted quiere instanciar un viewModel desde una Activity
-```
+```kotlin
 private val viewModel: CustomViewModel by viewModels()
 ```
 
 ### Instanciar un viewmodel compartido
 Si usted quiere instanciar un ViewModel desde un fragmento, tenga en cuenta que el viewmodel tendrá alcance de Actividad, así que este objeto será igual para todos los fragmentos de la actividad de host en común
-```
+```kotlin
 private val viewModel: CustomViewModel by activityViewModels()
 ```
 
 
 ### Usar Retrofit
 Siempre dentro de una corutina se puede usar retrofit como se muestra en el ejemplo
-```
+```kotlin
 fun getPokemon(query:String){
         viewModelScope.launch(Dispatchers.IO) {
             var response = RetrofitServices.pokedexRepository.getPokemon(query).execute()
