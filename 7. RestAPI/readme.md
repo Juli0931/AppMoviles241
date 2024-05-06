@@ -1,4 +1,5 @@
-<img src="https://restfulapi.net/wp-content/uploads/what-is-rest-api.png">
+<img src="https://restfulapi.net/wp-content/uploads/what-is-rest-api.png" width="256px">
+
 # 1. Instalar dependencias
 
 ### Dependencia para instanciar facilmente los viewmodels
