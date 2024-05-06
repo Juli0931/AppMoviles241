@@ -1,5 +1,7 @@
-# Configurar servicio de mensajería 
-Esta guía corresponde al uso de FCM V1, la más reciente versión del servicio de Push Notifications
+# SERVICIO DE MENSAJERÍA GOOGLE FIREBASE CLOUD MESSAGE
+
+# 1. Configurar servicio de mensajería 
+
 
 ## Dependencias
 
