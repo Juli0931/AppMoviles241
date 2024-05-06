@@ -10,6 +10,10 @@ implementation 'com.google.firebase:firebase-messaging-ktx:24.0.0'
 
 ## Cree una clase de servicio
 ```
+import com.google.firebase.messaging.FirebaseMessagingService
+import com.google.firebase.messaging.RemoteMessage
+import org.json.JSONObject
+
 class FCMService : FirebaseMessagingService() {
 
     override fun onMessageReceived(message: RemoteMessage) {
