@@ -28,14 +28,14 @@ class FCMService : FirebaseMessagingService() {
 
 
 
-## ::1D. Permisos para notificaciones
+## ::1C. Permisos para notificaciones
 Para android 13 o superior, se requiere usar este permiso
 ```
 <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 <uses-permission android:name="android.permission.INTERNET" />
 ```
 
-## ::1E. No olvide perdir el permiso en tiempo de ejecución
+## ::1D. No olvide perdir el permiso en tiempo de ejecución
 ```
 requestPermissions(
     arrayOf(
