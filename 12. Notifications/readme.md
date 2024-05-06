@@ -128,8 +128,26 @@ val notifyPendingIntent = PendingIntent.getActivity(
     PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE
 )
 ```
-# Configurar servicio de mensajería V1
+# 2. Configurar servicio de mensajería V1 en Google Cloud
 Este es el servivio de mensajería actualizado y está pensado para se un nodo de backend. La razón es que ahora no hay clave de servicio estática, sino que es ahora un Token (dinámico). El Token se extrae mediante una credencial de administrados generado desde la Google Cloud Console
+
+
+Para obtener una clave de servicio ingrese a la configuración de su proyecto.
+<ol>
+    <li>Vaya a su proyecto de Firebase. Configuración > Cloud Messaging</li>
+    <li>Si no esta habilitada la V1, actívela mendiante el link</li>
+    <li>Vaya a Administrar cuentas de servicio</li>
+    <li>Cree una cuenta de servicio usando el botón CREAR CUENTA DE SERVICIO con un nombre cualquiera</li>
+    <li>En rol escoga Firebase Admin y guarde</li>
+    <li>Ingrese a la cuenta de servicio y vaya a la pestaña CLAVES</li>
+    <li>Agrege una CLAVE JSON nueva</li>
+    <li>Descargue el JSON, ese será su clave.json para el programa</li>
+    <li>Ya tendrá todo lo necesario para publicar mensajes PUSH</li>
+</ol>
+
+## Referencias
+[1. Arquitectura de FCM](https://firebase.google.com/docs/cloud-messaging/fcm-architecture?hl=es-) <br>
+[2. Migración de Legacy a V1](https://firebase.google.com/docs/cloud-messaging/migrate-v1)
 
 Para poder usarlo, revise este proyecto
 [Generador de token OAuth Google](https://github.com/Domiciano/GoogleOAuthTokenGen) <br>
@@ -159,21 +177,6 @@ El payload del mensaje es
 }
 ```
 Verá que le hace falta una clave JSON
-Para obtenerla ingrese a la configuración de su proyecto.
-<ol>
-    <li>Vaya a su proyecto de Firebase. Configuración > Cloud Messaging</li>
-    <li>Si no esta habilitada la V1, actívela mendiante el link</li>
-    <li>Vaya a Administrar cuentas de servicio</li>
-    <li>Cree una cuenta de servicio usando el botón CREAR CUENTA DE SERVICIO con un nombre cualquiera</li>
-    <li>En rol escoga Firebase Admin y guarde</li>
-    <li>Ingrese a la cuenta de servicio y vaya a la pestaña CLAVES</li>
-    <li>Agrege una CLAVE JSON nueva</li>
-    <li>Descargue el JSON, ese será su clave.json para el programa</li>
-    <li>Ya tendrá todo lo necesario para publicar mensajes PUSH</li>
-</ol>
-## Referencias
-[1. Arquitectura de FCM](https://firebase.google.com/docs/cloud-messaging/fcm-architecture?hl=es-) <br>
-[2. Migración de Legacy a V1](https://firebase.google.com/docs/cloud-messaging/migrate-v1)
 
 
 
