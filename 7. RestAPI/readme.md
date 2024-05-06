@@ -29,7 +29,7 @@ Retrofit cuenta con un core, pero también un conversor basado en Gson de Google
 # 2. Configurar Retrofit
 Genere su servicio
 
-En service debe crear una interfaz con el CRUD del servicio
+En service debe crear una interfaz con el CRUD del servicio. Este ejemplo es para un GET Request
 ```kotlin
 import icesi.edu.co.apitest.data.dto.Pokemon
 import retrofit2.Call
