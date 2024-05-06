@@ -1,4 +1,4 @@
-<img src="https://restfulapi.net/wp-content/uploads/what-is-rest-api.png">
+<img src="https://sutilweb.eu/wp-content/uploads/2023/08/API-REST.jpg">
 
 # 1. Instalar dependencias
 
