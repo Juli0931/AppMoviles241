@@ -13,16 +13,10 @@ implementation 'com.google.firebase:firebase-messaging-ktx:24.0.0'
 class FCMService : FirebaseMessagingService() {
 
     override fun onMessageReceived(message: RemoteMessage) {
-        ...
+        val obj = JSONObject(message.data as Map<*, *>)
+        val json = obj.toString()
     }
 }
-```
-
-## Usar datos del RemoteMessage
-Para obtener JSON del mensaje recibido
-```
-val obj = JSONObject(message.data as Map<*, *>)
-val json = obj.toString()
 ```
 
 ## Registre el servicio en el manifest
